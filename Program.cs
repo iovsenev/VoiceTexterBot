@@ -28,10 +28,10 @@ namespace VoiceTexterBot
 
         static void ConfigureServices(IServiceCollection services)
         {
-            services.AddTransient<DefaultMessageControler>();
+            services.AddTransient<DefaultMessageController>();
             services.AddTransient<VoiceMessageController>();
             services.AddTransient<TextMessageController>();
-            services.AddTransient<VoiceMessageController>();
+            services.AddTransient<InlineKeyboardController>();
 
             // Регистрируем объект TelegramBotClient c токеном подключения
             services.AddSingleton<ITelegramBotClient>(provider => new TelegramBotClient("6730393471:AAHyI9gwLp3C3akwgA9CzKY7D9A8TRNLk_U"));
